@@ -1,0 +1,1256 @@
+#!/bin/bash
+#Inicio do script
+clear
+echo "--------------------------------------------------------------------------"
+echo "                             LINUX PARA INICIANTES                        "
+echo "--------------------------------------------------------------------------"
+echo "Digite seu nome "
+read name
+echo -e "\e[01;34mOlá $name, deseja realizar um tour pelo sistema? [s=Sim/n=Não]\e[00m"
+read resp
+if [ $resp = "s" ]
+then
+	cd /
+	ls
+	echo ""
+	echo -e "Este é o diretório /, é semelhante ao C: do Windows; nele estão contidos todos os outros diretórios principais do sistema:"
+	read var
+	
+	clear
+	echo "--------------------------------------------------------------------------"
+	echo "                             LINUX PARA INICIANTES                        "
+	echo "--------------------------------------------------------------------------"
+	cd /bin
+	ls
+	echo ""
+	echo -e "Este é o diretório bin, ele contém os comandos essenciais para o funcionamento do sistema (todos os usuários tem acesso)!"
+	read var
+	
+	clear
+	echo "--------------------------------------------------------------------------"
+	echo "                             LINUX PARA INICIANTES                        "
+	echo "--------------------------------------------------------------------------"
+	cd /boot
+	ls
+	echo ""
+	echo -e "Este é o diretório boot, ele contém os arquivos necessários para a inicialização do sistema (boot do sistema)!"
+	read var
+	
+	clear
+	echo "--------------------------------------------------------------------------"
+	echo "                             LINUX PARA INICIANTES                        "
+	echo "--------------------------------------------------------------------------"
+	cd /dev
+	ls
+	echo ""
+	echo -e "Este é o diretório dev, ele contém os arquivos de dispositivos e links para os periféricos da máquina!"
+	read var
+	
+	clear
+	echo "--------------------------------------------------------------------------"
+	echo "                             LINUX PARA INICIANTES                        "
+	echo "--------------------------------------------------------------------------"
+	cd /etc
+	ls
+	echo ""
+	echo -e "Este é o diretório etc, ele contém os arquivos de configuração do sistema!"
+	read var
+	
+	clear
+	echo "--------------------------------------------------------------------------"
+	echo "                             LINUX PARA INICIANTES                        "
+	echo "--------------------------------------------------------------------------"
+	cd /lib
+	ls
+	echo ""
+	echo -e "Este é o diretório lib, ele contém todas as bibliotecas compartilhadas para controle do kernel que são utilizadas pelos programas!"
+	read var
+	
+	clear
+	echo "--------------------------------------------------------------------------"
+	echo "                             LINUX PARA INICIANTES                        "
+	echo "--------------------------------------------------------------------------"
+	cd /media
+	ls
+	echo ""
+	echo -e "Este é o diretório media, ele é utilizado para a montagem de dispositivos removíveis (CDs, DVDs etc.)!"
+	read var
+	
+	clear
+	echo "--------------------------------------------------------------------------"
+	echo "                             LINUX PARA INICIANTES                        "
+	echo "--------------------------------------------------------------------------"
+	cd /mnt
+	ls
+	echo ""
+	echo -e "Este é o diretório mnt, ele é utilizado para a montagem temporária de sistemas de arquivos, é utilizado para o compartilhamento de arquivos entre Sistemas Operacionais!"
+	clear
+	read var
+	
+	clear
+	echo "--------------------------------------------------------------------------"
+	echo "                             LINUX PARA INICIANTES                        "
+	echo "--------------------------------------------------------------------------"
+	cd /opt
+	ls
+	echo ""
+	echo -e "Este é o diretório opt, ele é utilizado por programas que não são nativos da distribuição do sistema Linux!"
+	read var
+	
+	clear
+	echo "--------------------------------------------------------------------------"
+	echo "                             LINUX PARA INICIANTES                        "
+	echo "--------------------------------------------------------------------------"
+	cd /sbin
+	ls
+	echo ""
+	echo -e "Este é o diretório sbin, ele contém todos os comandos utilizados exclusivamente pelo usuário administrador (root)!"
+	read var
+	
+	clear
+	echo "--------------------------------------------------------------------------"
+	echo "                             LINUX PARA INICIANTES                        "
+	echo "--------------------------------------------------------------------------"
+	cd /srv
+	ls
+	echo -e "Este é o diretório srv, ele contém todos os dados dos servidores ligados ao sistema!"
+	read var
+	
+	clear
+	echo "--------------------------------------------------------------------------"
+	echo "                             LINUX PARA INICIANTES                        "
+	echo "--------------------------------------------------------------------------"
+	cd /tmp
+	ls
+	echo ""
+	echo -e "Este é o diretório tmp, ele contém os arquivos temporários do sistema!"
+	read var
+	
+	clear
+	echo "--------------------------------------------------------------------------"
+	echo "                             LINUX PARA INICIANTES                        "
+	echo "--------------------------------------------------------------------------"
+	cd /usr
+	ls
+	echo ""
+	echo -e "Este é o diretório usr, ele contém todos os programas que não são realmente essenciais para o funcionamento do sistema!"
+	read var
+	
+	clear
+	echo "--------------------------------------------------------------------------"
+	echo "                             LINUX PARA INICIANTES                        "
+	echo "--------------------------------------------------------------------------"
+	cd /var
+	ls
+	echo ""
+	echo -e "Este é o diretório var, ele guarda os arquivos com dados variáveis, como os logs de sistema, por exemplo!"
+fi
+echo -e "\e[00;31m**********Você está sendo direcionado ao seu diretório home do sistema!*********\e[00m"
+read ok
+cd
+surp(){
+	echo "Você escolheu a opção SURPREENDA-ME! Vamos lá..."
+    echo "Digite o número 1, 2, 3 ou 4 para surpreeder-se ou 5 para sair: "
+	resp=0
+	while [ $resp -lt 1 -o $resp -gt 5 ]
+	do
+		read resp
+	done
+    if [ $resp -eq  1 ]
+	then
+		echo ""
+		echo "Aperte as teclas CTRL+C para parar."
+		read ok
+		cat /dev/psaux
+		echo "O que você acabou de ver é a representação em texto da trajetória do mouse"
+		echo ""
+		surp
+	elif [ $resp -eq  2 ]
+	then
+		echo "Você entrou em um pequeno dicionário de termos do LINUX:"
+		echo ""
+		echo "ARQUIVO: É um recurso para o armazenamento de informação."
+		echo ""
+		echo "COMANDO: é a representação da ação do sistema."
+		echo ""
+		echo "CONSOLE OU TERMINAL: Este é um programa usado para dar comandos através do teclado ao Linux. Esses comandos são usados para dizer ao sistema operacional que ação ele deve executar."
+		echo ""
+		echo "DIRETÓRIO: É a estrutura utilizada para organizar arquivos no computador"
+		echo ""
+		echo "DISTRIBUIÇÃO: É a camada que vem acima do kernel do sistema operacional Linux, que a torna única."
+		echo ""
+		echo "FREE SOFTWARE FOUNDATION-FSF: Organização criada para promover e divulgar o software livre."
+		echo ""
+		echo "GERENCIADOR DE PACOTES: Aplicação que pode ser gráfica ou em modo texto que permite pesquisar, instalar e desinstalar aplicações junto com suas dependências."
+		echo ""
+		echo "GNU: É um projeto iniciado para se criar sistemas operacionais totalmente livres. Porém numca teve um sistema operacional completo."
+		echo ""
+		echo "GPL: É a licença de software livre, que permite que o software seja copiado, modificado, usado e distibuído."
+		echo ""
+		echo "GRUB: É o carregador de boot. É a primeira coisa a carregar quando o computador é iniciado. Se o computador é usado em Dual-Boot, ou seja, com dois sistemas operacionais, é através do Grub que é possível selecionar qual queremos iniciar. "
+		echo ""
+		echo "GUI: É a interface gráfica do usuário, ou seja, é a parte gráfica dos programas"
+		echo ""
+		echo "KERNEL PANIC: É um erro grave, uma falha no sistema que normalmente só é resolvida ao reiniciar o sistema."
+		echo ""
+		echo "KERNEL: É sistema operacional mais básico. É o núcleo do sistema"
+		echo ""
+		echo "OPEN SOURCE: É um movimento que suporta o compartilhamento de código fonte de um programa, mas 'impede' modificação não autorizada do autor original. "
+		echo ""
+		echo "PERMISSÃO: É o principal recurso dos sistemas baseados em Unix. As permissões são usadas de diferentes formas, e com diferentes finalidades. Mas principalmente para segurança e organização de um sistema."
+		echo ""
+		echo "REPOSITÓRIO: É o conjunto de ligações e pacotes de software normalmente hospedados em servidores de Internet. Eles são usados para tornar mais fácil para localizar, baixar e instalar todos os programas que são usados no linux. "
+		echo ""
+		echo "ROOT: É um tipo de usuário no Linux. É ele quem tem permissão para executar qualquer tarefa no sistema operacional, o usuário root tem permissões especiais, só ele pode instalar determinados programas."
+		echo ""
+		echo "SUPERUSUÁRIO: É o mesmo que Root."
+		read ok
+		surp
+	elif [ $resp -eq  3 ]
+	then
+		echo -e "\e[00;31m'JOGO DOS COMANDOS'\e[00m"
+		echo "'    .--.'   ------------------------------------------------------------"
+		echo "'   |o_o |' / Descubra os comandos para tornar-se um mestre em GNU/LINUX|"
+		echo "'   |:_/ |'/-------------------------------------------------------------"
+		echo "'  //   \ \'"
+		echo "' (|     | )'"
+		echo "' /'\_   _/ \'"
+		echo "' \___)=(___/'"
+		read ok
+		clear
+		
+		echo -e "\e[00;31m'PERGUNTA 1'\e[00m"
+		echo "'    .--.'   --------------------------------------------------------------"
+		echo "'   |o_o |' / Qual é o comando utilizado para a listagem de arq. ou diret.?|"
+		echo "'   |:_/ |'/---------------------------------------------------------------"
+		echo "'  //   \ \'"
+		echo "' (|     | )'"
+		echo "' /'\_   _/ \'"
+		echo "' \___)=(___/'"
+		read resp
+		if [ $resp = "ls" ]
+		then
+			clear
+			echo -e "\e[00;31m'PERGUNTA 2'\e[00m"
+			echo "'    .--.'   ------------------------------------------------------"
+			echo "'   |o_o |' / Qual é o comando utilizado para acessar um diretório?|"
+			echo "'   |:_/ |'/-------------------------------------------------------"
+			echo "'  //   \ \'"
+			echo "' (|     | )'"
+			echo "' /'\_   _/ \'"
+			echo "' \___)=(___/'"
+			read resp
+			if [ $resp = "cd" ]
+			then
+				clear
+				echo -e "\e[00;31m'PERGUNTA 3'\e[00m"
+				echo "'    .--.'   ----------------------------------------------------"
+				echo "'   |o_o |' / Qual é o comando utilizado para acessar um arquivo?|"
+				echo "'   |:_/ |'/-----------------------------------------------------"
+				echo "'  //   \ \'"
+				echo "' (|     | )'"
+				echo "' /'\_   _/ \'"
+				echo "' \___)=(___/'"
+				read resp
+				if [ $resp = "cat" ]
+				then
+					clear
+					echo -e "\e[00;31m'PERGUNTA 4'\e[00m"
+					echo "'    .--.'   --------------------------------------------------"
+					echo "'   |o_o |' / Qual é o comando utilizado para criar um arquivo?|"
+					echo "'   |:_/ |'/---------------------------------------------------"
+					echo "'  //   \ \'"
+					echo "' (|     | )'"
+					echo "' /'\_   _/ \'"
+					echo "' \___)=(___/'"
+					read resp
+					if [ $resp = "touch" ]
+					then
+						clear
+						echo -e "\e[00;31m'PERGUNTA 5'\e[00m"
+						echo "'    .--.'   ----------------------------------------------------"
+						echo "'   |o_o |' / Qual é o comando utilizado para criar um diretório?|"
+						echo "'   |:_/ |'/-----------------------------------------------------"
+						echo "'  //   \ \'"
+						echo "' (|     | )'"
+						echo "' /'\_   _/ \'"
+						echo "' \___)=(___/'"
+						read resp
+						if [ $resp = "mkdir" ]
+						then
+							clear
+							echo -e "\e[00;31m'PERGUNTA 6'\e[00m"
+							echo "'    .--.'   ------------------------------------------------------------"
+							echo "'   |o_o |' / Qual é a flag utilizada para listar detalhadamente um dir.?|"
+							echo "'   |:_/ |'/-------------------------------------------------------------"
+							echo "'  //   \ \'"
+							echo "' (|     | )'"
+							echo "' /'\_   _/ \'"
+							echo "' \___)=(___/'"
+							read resp
+							if [ $resp = "-l" ]
+							then
+								clear
+								echo -e "\e[00;31m'PERGUNTA 7'\e[00m"
+								echo "'    .--.'   ----------------------------------------------------"
+								echo "'   |o_o |' / Qual é o comando utilizado para mover um diretório?|"
+								echo "'   |:_/ |'/-----------------------------------------------------"
+								echo "'  //   \ \'"
+								echo "' (|     | )'"
+								echo "' /'\_   _/ \'"
+								echo "' \___)=(___/'"
+								read resp
+								if [ $resp = "mv" ]
+								then
+									clear
+									echo -e "\e[00;31m'PERGUNTA 8'\e[00m"
+									echo "'    .--.'   -------------------------------------------------------"
+									echo "'   |o_o |' / Qual é o comando utilizado para renomear um diretório?|"
+									echo "'   |:_/ |'/--------------------------------------------------------"
+									echo "'  //   \ \'"
+									echo "' (|     | )'"
+									echo "' /'\_   _/ \'"
+									echo "' \___)=(___/'"
+									read resp
+									if [ $resp = "mv" ]
+									then
+										clear
+										echo -e "\e[00;31m'PERGUNTA 9'\e[00m"
+										echo "'    .--.'   ------------------------------------------------------"
+										echo "'   |o_o |' / Qual é o comando utilizado para remover um diretório?|"
+										echo "'   |:_/ |'/-------------------------------------------------------"
+										echo "'  //   \ \'"
+										echo "' (|     | )'"
+										echo "' /'\_   _/ \'"
+										echo "' \___)=(___/'"
+										read resp
+										if [ $resp = "rm" ]
+										then
+											echo -e "\e[00;31m'ÚLTIMA PERGUNTA!!!'\e[00m"
+											read ok
+											clear
+											echo -e "\e[00;31m'PERGUNTA 10'\e[00m"
+											echo "'    .--.'   -------------------------------------------------------"
+											echo "'   |o_o |' / Qual é o comando utilizado para copiar um diret./arq.?|"
+											echo "'   |:_/ |'/--------------------------------------------------------"
+											echo "'  //   \ \'"
+											echo "' (|     | )'"
+											echo "' /'\_   _/ \'"
+											echo "' \___)=(___/'"
+											read resp
+											if [ $resp = "cp" ]
+											then
+												clear
+												echo -e "\e[00;31m'PARABÉNS!!! VOCÊ VENCEU O JOGO DOS COMANDOS DO SHELL LINUX.'\e[00m"
+											else
+												echo " QUE PENA!!! VOCÊ ERROU, TENTE NOVAMENTE DEPOIS."
+											fi
+										else
+											echo " QUE PENA!!! VOCÊ ERROU, TENTE NOVAMENTE DEPOIS."
+										fi
+									else
+										echo " QUE PENA!!! VOCÊ ERROU, TENTE NOVAMENTE DEPOIS."
+									fi
+								else
+									echo " QUE PENA!!! VOCÊ ERROU, TENTE NOVAMENTE DEPOIS."
+								fi
+							else
+								echo " QUE PENA!!! VOCÊ ERROU, TENTE NOVAMENTE DEPOIS."
+							fi
+						else
+							echo " QUE PENA!!! VOCÊ ERROU, TENTE NOVAMENTE DEPOIS."
+						fi
+					else
+						echo " QUE PENA!!! VOCÊ ERROU, TENTE NOVAMENTE DEPOIS."
+					fi
+				else
+					echo " QUE PENA!!! VOCÊ ERROU, TENTE NOVAMENTE DEPOIS."
+				fi
+			else
+				echo " QUE PENA!!! VOCÊ ERROU, TENTE NOVAMENTE DEPOIS."
+			fi
+		else
+			echo " QUE PENA!!! VOCÊ ERROU, TENTE NOVAMENTE DEPOIS."
+		fi
+		read ok
+		clear
+		surp
+	elif [ $resp -eq  4 ]
+	then
+		echo -e "\e[00;31m'JOGO DOS USUÁRIOS E PERMISSÕES'\e[00m"
+		echo "'    .--.'   -------------------------------------------------------------"
+		echo "'   |o_o |' / Descubra as permissões para tornar-se um mestre em GNU/LINUX|"
+		echo "'   |:_/ |'/--------------------------------------------------------------"
+		echo "'  //   \ \'"
+		echo "' (|     | )'"
+		echo "' /'\_   _/ \'"
+		echo "' \___)=(___/'"
+		read ok
+		clear
+		
+		echo -e "\e[00;31m'PERGUNTA 1'\e[00m"
+		echo "'    .--.'   ----------------------------------------------------"
+		echo "'   |o_o |' / Qual é o comando utilizado para alterar permissões?|"
+		echo "'   |:_/ |'/-----------------------------------------------------"
+		echo "'  //   \ \'"
+		echo "' (|     | )'"
+		echo "' /'\_   _/ \'"
+		echo "' \___)=(___/'"
+		read resp
+		if [ $resp = "chmod" ]
+		then
+			clear
+			echo -e "\e[00;31m'PERGUNTA 2'\e[00m"
+			echo "'    .--.'   -----------------------"
+			echo "'   |o_o |' / Qual é o valor de 'r'?|"
+			echo "'   |:_/ |'/------------------------"
+			echo "'  //   \ \'"
+			echo "' (|     | )'"
+			echo "' /'\_   _/ \'"
+			echo "' \___)=(___/'"
+			read resp
+			if [ $resp -eq 4 ]
+			then
+				clear
+				echo -e "\e[00;31m'PERGUNTA 3'\e[00m"
+				echo "'    .--.'   -----------------------"
+				echo "'   |o_o |' / Qual é o valor de 'w'?|"
+				echo "'   |:_/ |'/------------------------"
+				echo "'  //   \ \'"
+				echo "' (|     | )'"
+				echo "' /'\_   _/ \'"
+				echo "' \___)=(___/'"
+				read resp
+				if [ $resp -eq 2 ]
+				then
+					clear
+					echo -e "\e[00;31m'PERGUNTA 4'\e[00m"
+					echo "'    .--.'   -----------------------"
+					echo "'   |o_o |' / Qual é o valor de 'x'?|"
+					echo "'   |:_/ |'/------------------------"
+					echo "'  //   \ \'"
+					echo "' (|     | )'"
+					echo "' /'\_   _/ \'"
+					echo "' \___)=(___/'"
+					read resp
+					if [ $resp -eq 1 ]
+					then
+						clear
+						echo -e "\e[00;31m'PERGUNTA 5'\e[00m"
+						echo "'    .--.'   -----------------------------------------------------------------"
+						echo "'   |o_o |' / Qual o comando utilizado para criar um usuário (sem inf. adic.)?|"
+						echo "'   |:_/ |'/------------------------------------------------------------------"
+						echo "'  //   \ \'"
+						echo "' (|     | )'"
+						echo "' /'\_   _/ \'"
+						echo "' \___)=(___/'"
+						read resp
+						if [ $resp = "useradd" ]
+						then
+							clear
+							echo -e "\e[00;31m'PERGUNTA 6'\e[00m"
+							echo "'    .--.'   -----------------------------------------------------------------"
+							echo "'   |o_o |' / Qual o comando utilizado para criar um usuário (com inf. adic.)?|"
+							echo "'   |:_/ |'/------------------------------------------------------------------"
+							echo "'  //   \ \'"
+							echo "' (|     | )'"
+							echo "' /'\_   _/ \'"
+							echo "' \___)=(___/'"
+							read resp
+							if [ $resp = "adduser" ]
+							then
+								clear
+								echo -e "\e[00;31m'PERGUNTA 7'\e[00m"
+								echo "'    .--.'   -----------------------------------------------------------------"
+								echo "'   |o_o |' / Qual o comando utilizado para remover um usuário mant. seu dir.?|"
+								echo "'   |:_/ |'/------------------------------------------------------------------"
+								echo "'  //   \ \'"
+								echo "' (|     | )'"
+								echo "' /'\_   _/ \'"
+								echo "' \___)=(___/'"
+								read resp
+								if [ $resp = "userdel" ]
+								then
+									clear
+									echo -e "\e[00;31m'PERGUNTA 8'\e[00m"
+									echo "'    .--.'   ----------------------------------------------------------------"
+									echo "'   |o_o |' / Qual é a flag utilizada para remover um usuário com seu diret.?|"
+									echo "'   |:_/ |'/-----------------------------------------------------------------"
+									echo "'  //   \ \'"
+									echo "' (|     | )'"
+									echo "' /'\_   _/ \'"
+									echo "' \___)=(___/'"
+									read resp
+									if [ $resp = "-r" ]
+									then
+										clear
+										echo -e "\e[00;31m'PERGUNTA 9'\e[00m"
+										echo "'    .--.'   -------------------------"
+										echo "'   |o_o |' / Qual é o valor de r+w+x?|"
+										echo "'   |:_/ |'/--------------------------"
+										echo "'  //   \ \'"
+										echo "' (|     | )'"
+										echo "' /'\_   _/ \'"
+										echo "' \___)=(___/'"
+										read resp
+										if [ $resp -eq 7 ]
+										then
+											echo -e "\e[00;31m'ÚLTIMA PERGUNTA!!!'\e[00m"
+											read ok
+											clear
+											echo -e "\e[00;31m'PERGUNTA 10'\e[00m"
+											echo "'    .--.'   ---------------------------------------------"
+											echo "'   |o_o |' / Qual é o valor (numeral) da permissão 'rw-'?|"
+											echo "'   |:_/ |'/----------------------------------------------"
+											echo "'  //   \ \'"
+											echo "' (|     | )'"
+											echo "' /'\_   _/ \'"
+											echo "' \___)=(___/'"
+											read resp
+											if [ $resp -eq 6 ]
+											then
+												clear
+												echo -e "\e[00;31m'PARABÉNS!!! VOCÊ VENCEU O JOGO DOS USUÁRIOS E PERMISSÕES DO SHELL LINUX.'\e[00m"
+											else
+												echo " QUE PENA!!! VOCÊ ERROU, TENTE NOVAMENTE DEPOIS."
+											fi
+										else
+											echo " QUE PENA!!! VOCÊ ERROU, TENTE NOVAMENTE DEPOIS."
+										fi
+									else
+										echo " QUE PENA!!! VOCÊ ERROU, TENTE NOVAMENTE DEPOIS."
+									fi
+								else
+									echo " QUE PENA!!! VOCÊ ERROU, TENTE NOVAMENTE DEPOIS."
+								fi
+							else
+								echo " QUE PENA!!! VOCÊ ERROU, TENTE NOVAMENTE DEPOIS."
+							fi
+						else
+							echo " QUE PENA!!! VOCÊ ERROU, TENTE NOVAMENTE DEPOIS."
+						fi
+					else
+						echo " QUE PENA!!! VOCÊ ERROU, TENTE NOVAMENTE DEPOIS."
+					fi
+				else
+					echo " QUE PENA!!! VOCÊ ERROU, TENTE NOVAMENTE DEPOIS."
+				fi
+			else
+				echo " QUE PENA!!! VOCÊ ERROU, TENTE NOVAMENTE DEPOIS."
+			fi
+		else
+			echo " QUE PENA!!! VOCÊ ERROU, TENTE NOVAMENTE DEPOIS."
+		fi
+		read ok
+		clear
+		surp
+		
+	elif [ $resp -eq 5 ]
+	then
+		menu
+	fi
+}
+
+arqd(){
+	clear
+	echo -e "\e[00;31m|------------------------------------------------------|\e[00m"
+	echo -e "\e[00;31m|                  ARQUIVOS E DIRETÓRIOS               |\e[00m"
+	echo -e "\e[00;31m|------------------------------------------------------|\e[00m"
+	echo -e "\e[00;31m|          Digite o número da operação desejada:       |\e[00m"
+	echo -e "\e[00;31m|------------------------------------------------------|\e[00m"
+	echo -e "\e[00;31m|                  1. CRIAR DIRETÓRIO                  |\e[00m"
+	echo -e "\e[00;31m|                  2. EXCLUIR DIRETÓRIO                |\e[00m"
+	echo -e "\e[00;31m|                  3. RENOMEAR DIRETÓRIO               |\e[00m"
+	echo -e "\e[00;31m|                  4. MOVER DIRETÓRIO                  |\e[00m"
+	echo -e "\e[00;31m|                  5. LISTAR DIRETÓRIO                 |\e[00m"
+	echo -e "\e[00;31m|                  6. COPIAR DIRETÓRIO                 |\e[00m"
+	echo -e "\e[00;31m|                  7. CRIAR ARQUIVO                    |\e[00m"
+	echo -e "\e[00;31m|                  8. EXCLUIR ARQUIVO                  |\e[00m"
+	echo -e "\e[00;31m|                  9. RENOMEAR ARQUIVO                 |\e[00m"
+	echo -e "\e[00;31m|                  10. MOVER ARQUIVO                   |\e[00m"
+	echo -e "\e[00;31m|                  11. COPIAR ARQUIVO                  |\e[00m"
+	echo -e "\e[00;31m|                  12. RETORNAR AO MENU                |\e[00m"
+	echo -e "\e[00;31m|------------------------------------------------------|\e[00m"
+	read resposta
+	while [ $resposta -lt  1 -o $resposta -gt 12 ]
+	do
+		echo "VALOR INCORRETO! DIGITE UM VALOR DENTRO DO INTERVALO ESPECIFICADO!"
+		read resposta
+	done
+	case $resposta in 
+		1) echo "Digite o nome do diretório a ser criado: "
+		read nome_dir
+		echo "Digite a localização do diretório a ser criado: "
+		read loc_dir
+		cd $loc_dir
+		mkdir $nome_dir
+		echo "**********FEITO!**********"
+		echo "Deseja ver o comando utilizado? [s=Sim/n=Não]"
+		read see
+		if [ $see =  "s" ]
+		then
+			echo "O texto entre aspas faz parte do comando, o restante é o complemento do mesmo:"
+			echo -e "Comando Utilizado (ACESSAR DIRETÓRIO) : \e[00;31m'cd'\e[00m $loc_dir"
+			echo -e "Comando Utilizado (CRIAR DIRETÓRIO): \e[00;31m'mkdir'\e[00m $nome_dir"
+		fi
+		read ok			
+		arqd ;;
+		2) echo "Digite o nome do diretório a ser excluído: "
+		read nome_dir
+		echo "Digite a localização do diretório a ser excluído (incluindo o mesmo): "
+		read loc_dir
+		cd $loc_dir
+		cd ..
+		rm -r $nome_dir
+		echo "**********FEITO!**********"
+		echo "Deseja ver o comando utilizado? [s=Sim/n=Não]"
+		read see
+		if [ $see =  "s" ]
+		then
+			echo "O texto entre aspas faz parte do comando, o restante é o complemento do mesmo:"
+			echo -e "Comando Utilizado (ACESSAR DIRETÓRIO) : \e[00;31m'cd'\e[00m $loc_dir"
+			echo -e "Comando Utilizado (VOLTAR UM NÍVEL NA ÁRVORE DE DIRETÓRIOS) : \e[00;31m'cd'\e[00m .."
+			echo -e "Comando Utilizado (REMOVER DIRETÓRIO COM OU SEM CONTEÚDO): \e[00;31m'rm'\e[00m -r $nome_dir"
+		fi
+		read ok			
+		arqd ;;
+		3) echo "Digite a localização do diretório com o nome atual: "
+		read atual_dir
+		echo "Digite a localização do diretório com o novo nome: "
+		read novo_dir
+		mv $atual_dir $novo_dir
+		echo "**********FEITO!**********"
+		echo "Deseja ver o comando utilizado? [s=Sim/n=Não]"
+		read see
+		if [ $see =  "s" ]
+		then
+			echo "O texto entre aspas faz parte do comando, o restante é o complemento do mesmo:"
+			echo -e "Comando Utilizado (RENOMEAR DIRETÓRIO) : \e[00;31m'mv'\e[00m $atual_dir $novo_dir"
+		fi
+		read ok			
+		arqd ;;
+		4) echo "Digite a localização atual do diretório a ser movido (incluindo o mesmo): "
+		read atual_dir
+		echo "Digite a nova localização do diretório (incluindo o mesmo): "
+		read novo_dir
+		mv $atual_dir $novo_dir
+		echo "**********FEITO!**********"
+		echo "Deseja ver o comando utilizado? [s=Sim/n=Não]"
+		read see
+		if [ $see =  "s" ]
+		then
+			echo "O texto entre aspas faz parte do comando, o restante é o complemento do mesmo:"
+			echo -e "Comando Utilizado (MOVER DIRETÓRIO): \e[00;31m'mv'\e[00m $atual_dir $novo_dir"
+		fi
+		read ok			
+		arqd ;;
+		5) echo "Digite a localização do diretório (incluindo o mesmo) a ter seu conteúdo listado: "
+		read loc_dir
+		ls $loc_dir
+		echo "**********FEITO!**********"
+		echo "Deseja ver o comando utilizado? [s=Sim/n=Não]"
+		read see
+		if [ $see =  "s" ]
+		then
+			echo "O texto entre aspas faz parte do comando, o restante é o complemento do mesmo:"
+			echo -e "Comando Utilizado (LISTAR DIRETÓRIO) : \e[00;31m'ls'\e[00m $loc_dir"
+		fi
+		read ok			
+		arqd ;;
+		6) echo "Digite a localização do diretório (incluindo o mesmo) a ter seu conteúdo copiado: "
+		read loc_dir
+		echo "Digite a nova localização do diretório copiado (não incluindo o mesmo): "
+		read novo_loc_dir
+		cp -r $loc_dir $novo_loc_dir
+		echo "**********FEITO!**********"
+		echo "Deseja ver o comando utilizado? [s=Sim/n=Não]"
+		read see
+		if [ $see =  "s" ]
+		then
+			echo "O texto entre aspas faz parte do comando, o restante é o complemento do mesmo:"
+			echo -e "Comando Utilizado (COPIAR DIRETÓRIO) : \e[00;31m'cp'\e[00m -r $loc_dir $novo_loc_dir"
+		fi
+		read ok			
+		arqd ;;
+		7) echo "Digite o nome do arquivo a ser criado (juntamente com a extensão do mesmo): "
+		read nome_arq
+		echo "Digite a localização do arquivo a ser criado: "
+		read loc_arq
+		cd $loc_arq
+		touch $nome_arq
+		echo "**********FEITO!**********"
+		echo "Deseja ver o comando utilizado? [s=Sim/n=Não]"
+		read see
+		if [ $see =  "s" ]
+		then
+			echo "O texto entre aspas faz parte do comando, o restante é o complemento do mesmo:"
+			echo -e "Comando Utilizado (ACESSAR DIRETÓRIO) : \e[00;31m'cd'\e[00m $loc_arq"
+			echo -e "Comando Utilizado (CRIAR ARQUIVO): \e[00;31m'touch'\e[00m $nome_arq"
+		fi
+		read ok			
+		arqd ;;
+		8) echo "Digite o nome do arquivo a ser excluído: "
+		read nome_arq
+		echo "Digite a localização do arquivo a ser excluído: "
+		read loc_arq
+		cd $loc_arq
+		rm $nome_arq
+		echo "**********FEITO!**********"
+		echo "Deseja ver o comando utilizado? [s=Sim/n=Não]"
+		read see
+		if [ $see =  "s" ]
+		then
+			echo "O texto entre aspas faz parte do comando, o restante é o complemento do mesmo:"
+			echo -e "Comando Utilizado (ACESSAR LOCALIZAÇÃO DO ARQUIVO) : \e[00;31m'cd'\e[00m $loc_arq"
+			echo -e "Comando Utilizado (REMOVER ARQUIVO): \e[00;31m'rm'\e[00m $nome_arq"
+		fi
+		read ok			
+		arqd ;;
+		9) echo "Digite a localização do arquivo (incluindo o mesmo com o nome atual): "
+		read atual_arq
+		echo "Digite a localização do arquivo com o novo nome (incluindo o mesmo): "
+		read novo_arq
+		mv $atual_arq $novo_arq
+		echo "**********FEITO!**********"
+		echo "Deseja ver o comando utilizado? [s=Sim/n=Não]"
+		read see
+		if [ $see =  "s" ]
+		then
+			echo "O texto entre aspas faz parte do comando, o restante é o complemento do mesmo:"
+			echo -e "Comando Utilizado (RENOMEAR ARQUIVO) : \e[00;31m'mv'\e[00m $atual_arq $novo_arq"
+		fi
+		read ok			
+		arqd ;;
+		10) echo "Digite a localização atual do arquivo a ser movido (incluindo o mesmo): "
+		read atual_arq
+		echo "Digite a nova localização do arquivo (incluindo o mesmo): "
+		read novo_arq
+		mv $atual_arq $novo_arq
+		echo "**********FEITO!**********"
+		echo "Deseja ver o comando utilizado? [s=Sim/n=Não]"
+		read see
+		if [ $see =  "s" ]
+		then
+			echo "O texto entre aspas faz parte do comando, o restante é o complemento do mesmo:"
+			echo -e "Comando Utilizado (MOVER ARQUIVO): \e[00;31m'mv'\e[00m $atual_dir $novo_dir"
+		fi
+		read ok			
+		arqd ;;
+		11) echo "Digite a localização do arquivo (incluindo o mesmo) a ter seu conteúdo copiado: "
+		read loc_arq
+		echo "Digite a nova localização do arquivo copiado (não incluindo o mesmo): "
+		read novo_loc_arq
+		cp $loc_arq $novo_loc_arq
+		echo "**********FEITO!**********"
+		echo "Deseja ver o comando utilizado? [s=Sim/n=Não]"
+		read see
+		if [ $see =  "s" ]
+		then
+			echo "O texto entre aspas faz parte do comando, o restante é o complemento do mesmo:"
+			echo -e "Comando Utilizado (COPIAR DIRETÓRIO) : \e[00;31m'cp'\e[00m $loc_arq $novo_loc_arq"
+		fi
+		read ok			
+		arqd ;;
+		12) menu ;;
+	esac		
+} 
+
+usuarios(){
+	clear
+	echo -e "\e[00;31m|------------------------------------------------------|\e[00m"
+	echo -e "\e[00;31m|                  OPERAÇÕES COM USUÁRIOS              |\e[00m"
+	echo -e "\e[00;31m|------------------------------------------------------|\e[00m"
+	echo -e "\e[00;31m|          Digite o número da operação desejada:       |\e[00m"
+	echo -e "\e[00;31m|------------------------------------------------------|\e[00m"
+	echo -e "\e[00;31m|                  1. ADICIONAR USUÁRIO                |\e[00m"
+	echo -e "\e[00;31m|    2. ADICIONAR USUÁRIO COM INFORMAÇÕES ADICIONAIS   |\e[00m"
+	echo -e "\e[00;31m|                  3. REMOVER USUÁRIO                  |\e[00m"
+	echo -e "\e[00;31m|           4. REMOVER O USUÁRIO E SEU DIRETÓRIO       |\e[00m"
+	echo -e "\e[00;31m|                  5. RETORNAR AO MENU                 |\e[00m"
+	echo -e "\e[00;31m|------------------------------------------------------|\e[00m"
+	read resposta
+	while [ $resposta -lt  1 -o $resposta -gt 5 ]
+	do
+		echo "VALOR INCORRETO! DIGITE UM VALOR DENTRO DO INTERVALO ESPECIFICADO!"
+		read resposta
+	done
+	case $resposta in 
+		1) echo "Não se esqueça,para isso, você precisa estar logado como root "
+		echo "Vamos criar um usuário,digite o nome do usuário:"
+		read nomedeusuario
+		useradd $nomedeusuario
+		echo "**********FEITO!**********"
+		echo "Deseja ver o comando utilizado? [s=Sim/n=Não]"
+		read see
+		if [ $see =  "s" ]
+		then
+			echo "O texto entre aspas faz parte do comando, o restante é o complemento do mesmo:"
+			echo -e "Comando Utilizado (CRIAR USUÁRIO) : \e[00;31m'useradd'\e[00m $nomedeusuario"
+			echo "Com esse comando, você pode criar um usuário e definir seus atributos depois, manualmente."
+		fi
+		read ok			
+		usuarios ;;
+		
+		2) echo "Não se esqueça,para isso, você precisa estar logado como root "
+		echo "Vamos criar um usuário,digite o nome do usuário:"
+		read nomedeusuario
+		adduser $nomedeusuario
+		echo "**********FEITO!**********"
+		echo "Deseja ver o comando utilizado? [s=Sim/n=Não]"
+		read see
+		if [ $see =  "s" ]
+		then
+			echo "O texto entre aspas faz parte do comando, o restante é o complemento do mesmo:"
+			echo -e "Comando Utilizado (CRIAR USUÁRIO E INFORMAÇÕES ADICIONAIS) : \e[00;31m'adduser'\e[00m $nomedeusuario"
+			echo "Com esse comando, você pode criar um usuário já definindo seus atributos, como senha e grupo."
+		fi
+		read ok
+		usuarios ;;
+		
+		3) echo "Não se esqueça,para isso, você precisa estar logado como root "
+		echo "Vamos deletar um usuário, digite o nome do usuário:"
+		read nomedeusuario
+		userdel $nomedeusuario
+		echo "**********FEITO!**********"
+		echo "Deseja ver o comando utilizado? [s=Sim/n=Não]"
+		read see
+		if [ $see =  "s" ]
+		then
+			echo "O texto entre aspas faz parte do comando, o restante é o complemento do mesmo:"
+			echo -e "Comando Utilizado (REMOVER USUÁRIO) : \e[00;31m'userdel'\e[00m $nomedeusuario"
+			echo "Este comando deleta o usuário e só ele."
+		fi
+		read ok			
+		usuarios ;;
+		
+		4) echo "Não se esqueça,para isso, você precisa estar logado como root "
+		echo "Vamos deletar um usuário e seu diretório, digite o nome do usuário:"
+		read nomedeusuario
+		userdel -r $nomedeusuario
+		echo "**********FEITO!**********"
+		echo "Deseja ver o comando utilizado? [s=Sim/n=Não]"
+		read see
+		if [ $see =  "s" ]
+		then
+			echo "O texto entre aspas faz parte do comando, o restante é o complemento do mesmo:"
+			echo -e "Comando Utilizado (REMOVER USUÁRIO E SEU DIRETÓRIO HOME) : \e[00;31m'userdel -r'\e[00m $nomedeusuario"
+			echo "Apaga o usuário de forma recursiva, apagando tambem seu diretório home."
+		fi
+		read ok
+		usuarios ;;
+		
+		5) menu ;;
+	esac
+}
+
+parqd(){
+	clear
+	echo -e "\e[00;31m|------------------------------------------------------|\e[00m"
+	echo -e "\e[00;31m|          PERMISSÕES COM ARQUIVOS E DIRETÓRIOS        |\e[00m"
+	echo -e "\e[00;31m|------------------------------------------------------|\e[00m"
+	echo -e "\e[00;31m|          Digite o número da operação desejada:       |\e[00m"
+	echo -e "\e[00;31m|------------------------------------------------------|\e[00m"
+	echo -e "\e[00;31m|            1. EDITAR PERMISSÕES (NUMERAIS)           |\e[00m"
+	echo -e "\e[00;31m|                2. TABELA DE CONVERSÃO                |\e[00m"
+	echo -e "\e[00;31m|                  3. RETORNAR AO MENU                 |\e[00m"
+	echo -e "\e[00;31m|------------------------------------------------------|\e[00m"
+	read resposta
+	while [ $resposta -lt 1 -o $resposta -gt 3 ]
+	do
+		echo "VALOR INCORRETO! DIGITE UM VALOR DENTRO DO INTERVALO ESPECIFICADO!"
+		read resposta
+	done
+	case $resposta in 
+		1) echo "Digite a localização e o nome do diretório ou arquivo a ser editado: "
+		read loc_alv
+		echo "Permissões para o usúario dono:"
+		echo "Haverá permissão de leitura para o mesmo? [s=Sim/n=Não]"
+		read see
+		while [ $see != "s" -a $see != "n" ]
+		do
+			echo "VALOR INCORRETO! DIGITE UM DOS VALORES ESPECIFICADOS!"
+			read see
+		done
+		if [ $see = "s" ]
+		then
+			r=1
+		elif [ $see = "n" ]
+		then
+			r=0
+		fi
+		echo "Haverá permissão de escrita no comando? [s=Sim/n=Não]"
+		read see
+		while [ $see != "s" -a $see != "n" ]
+		do
+			echo "VALOR INCORRETO! DIGITE UM DOS VALORES ESPECIFICADOS!"
+			read see
+		done
+		if [ $see = "s" ]
+		then
+			w=1
+		elif [ $see =  "n" ]
+		then
+			w=0
+		fi
+		echo "Haverá permissão de execução no comando? [s=Sim/n=Não]"
+		read see
+		while [ $see != "s" -a $see != "n" ]
+		do
+			echo "VALOR INCORRETO! DIGITE UM DOS VALORES ESPECIFICADOS!"
+			read see
+		done
+		if [ $see = "s" ]
+		then
+			x=1
+		elif [ $see = "n" ]
+		then
+			x=0
+		fi
+		perm=$r$w$x
+		case $perm in
+			000) u=0;;
+			100) u=4;;
+			010) u=2;;
+			001) u=1;;
+			110) u=6;;
+			101) u=5;;
+			011) u=3;;
+			111) u=7;;
+		esac
+		echo "Permissões para o grupo:"
+		echo "Haverá permissão de leitura para o mesmo? [s=Sim/n=Não]"
+		read see
+		while [ $see != "s" -a $see != "n" ]
+		do
+			echo "VALOR INCORRETO! DIGITE UM DOS VALORES ESPECIFICADOS!"
+			read see
+		done
+		if [ $see = "s" ]
+		then
+			r=1
+		elif [ $see = "n" ]
+		then
+			r=0
+		fi
+		echo "Haverá permissão de escrita no comando? [s=Sim/n=Não]"
+		read see
+		while [ $see != "s" -a $see != "n" ]
+		do
+			echo "VALOR INCORRETO! DIGITE UM DOS VALORES ESPECIFICADOS!"
+			read see
+		done
+		if [ $see = "s" ]
+		then
+			w=1
+		elif [ $see =  "n" ]
+		then
+			w=0
+		fi
+		echo "Haverá permissão de execução no comando? [s=Sim/n=Não]"
+		read see
+		while [ $see != "s" -a $see != "n" ]
+		do
+			echo "VALOR INCORRETO! DIGITE UM DOS VALORES ESPECIFICADOS!"
+			read see
+		done
+		if [ $see = "s" ]
+		then
+			x=1
+		elif [ $see = "n" ]
+		then
+			x=0
+		fi
+		perm=$r$w$x
+		case $perm in
+			000) g=0;;
+			100) g=4;;
+			010) g=2;;
+			001) g=1;;
+			110) g=6;;
+			101) g=5;;
+			011) g=3;;
+			111) g=7;;
+		esac
+		echo "Permissões para outros:"
+		echo "Haverá permissão de leitura para o mesmo? [s=Sim/n=Não]"
+		read see
+		while [ $see != "s" -a $see != "n" ]
+		do
+			echo "VALOR INCORRETO! DIGITE UM DOS VALORES ESPECIFICADOS!"
+			read see
+		done
+		if [ $see = "s" ]
+		then
+			r=1
+		elif [ $see = "n" ]
+		then
+			r=0
+		fi
+		echo "Haverá permissão de escrita no comando? [s=Sim/n=Não]"
+		read see
+		while [ $see != "s" -a $see != "n" ]
+		do
+			echo "VALOR INCORRETO! DIGITE UM DOS VALORES ESPECIFICADOS!"
+			read see
+		done
+		if [ $see = "s" ]
+		then
+			w=1
+		elif [ $see =  "n" ]
+		then
+			w=0
+		fi
+		echo "Haverá permissão de execução no comando? [s=Sim/n=Não]"
+		read see
+		while [ $see != "s" -a $see != "n" ]
+		do
+			echo "VALOR INCORRETO! DIGITE UM DOS VALORES ESPECIFICADOS!"
+			read see
+		done
+		if [ $see = "s" ]
+		then
+			x=1
+		elif [ $see = "n" ]
+		then
+			x=0
+		fi
+		perm=$r$w$x
+		case $perm in
+			000) o=0;;
+			100) o=4;;
+			010) o=2;;
+			001) o=1;;
+			110) o=6;;
+			101) o=5;;
+			011) o=3;;
+			111) o=7;;
+		esac
+		com=$u$g$o
+		chmod $com $loc_alv
+		echo "**********FEITO!**********"
+		echo "Deseja ver o comando utilizado? [s=Sim/n=Não]"
+		read see
+		if [ $see =  "s" ]
+		then
+			echo "O texto entre aspas faz parte do comando, o restante é o complemento do mesmo:"
+			echo -e "Comando Utilizado (Alterar Permissões - Numeral) : \e[00;31m'chmod numero de permissão (consultar a tabela de conversão octal)'\e[00m arquivo ou diretório"
+		fi
+		read ok		
+		parqd ;;
+		
+		2) clear
+		echo ""
+		echo -e "\e[00;31m|---------------------------------------------------------|\e[00m"
+		echo -e "\e[00;31m|              TABELA DE CONVERSÃO DE PERMISSÕES 	        |\e[00m"
+		echo -e "\e[00;31m|---------------------------------------------------------|\e[00m"
+		echo -e "\e[00;31m|       | R(Leitura) | W(Escrita) | X(Execução) |Total    |\e[00m"
+		echo -e "\e[00;31m|---------------------------------------------------------|\e[00m"
+		echo -e "\e[00;31m|Valores|           4|      2 |            1|             |\e[00m"
+		echo -e "\e[00;31m|---------------------------------------------------------|\e[00m"
+		echo -e "\e[00;31m|Literal|         Não|    Não | 	       Não|     0       |\e[00m"
+		echo -e "\e[00;31m|Literal|         Não|    Não | 	       Sim|     1       |\e[00m"
+		echo -e "\e[00;31m|Literal|         Não|    Sim | 	       Não|     2       |\e[00m"
+		echo -e "\e[00;31m|Literal|         Não|    Sim | 	       Sim|     3       |\e[00m"
+		echo -e "\e[00;31m|Literal|         Sim|    Não | 	       Não|     4       |\e[00m"
+		echo -e "\e[00;31m|Literal|         Sim|    Não | 	       Sim|     5       |\e[00m"
+		echo -e "\e[00;31m|Literal|         Sim|    Sim | 	       Não|     6       |\e[00m"
+		echo -e "\e[00;31m|Literal|         Sim|    Sim | 	       Sim|     7       |\e[00m"
+		echo -e "\e[00;31m|---------------------------------------------------------|\e[00m" 
+		parqd ;;
+		
+		3) menu ;;
+	esac
+} 
+
+acarqd(){
+	clear
+	echo -e "\e[00;31m|------------------------------------------------------|\e[00m"
+	echo -e "\e[00;31m|             ACESSO DE ARQUIVOS E DIRETÓRIOS          |\e[00m"
+	echo -e "\e[00;31m|------------------------------------------------------|\e[00m"
+	echo -e "\e[00;31m|          Digite o número da operação desejada:       |\e[00m"
+	echo -e "\e[00;31m|------------------------------------------------------|\e[00m"
+	echo -e "\e[00;31m|                  1. EXIBIR EXPLICAÇÃO                |\e[00m"
+	echo -e "\e[00;31m|                  2. ACESSAR DIRETÓRIO                |\e[00m"
+	echo -e "\e[00;31m|                  3. LISTAR DIRETÓRIO                 |\e[00m"
+	echo -e "\e[00;31m|           4. LISTAR DIRETÓRIO DETALHADAMENTE         |\e[00m"
+	echo -e "\e[00;31m|                  5. ACESSAR ARQUIVO                  |\e[00m"
+	echo -e "\e[00;31m|                  6. RETORNAR AO MENU                 |\e[00m"
+	echo -e "\e[00;31m|------------------------------------------------------|\e[00m"
+	read resposta
+	while [ $resposta -lt  1 -o $resposta -gt 6 ]
+	do
+		echo "VALOR INCORRETO! DIGITE UM VALOR DENTRO DO INTERVALO ESPECIFICADO!"
+		read resposta
+	done
+	case $resposta in 
+		1) clear
+	    echo -e "\e[00;31m|------------------------------------------------------|\e[00m"
+	    echo -e "\e[00;31m|    OPERAÇÕES PARA ACESSO DE ARQUIVOS E DIRETORIOS    |\e[00m"
+	    echo -e "\e[00;31m|------------------------------------------------------|\e[00m"
+		echo "O comando 'ls' mostra o conteúdo de um diretório (arquivos e diretórios)."
+		echo "Se o caminho do diretório não for especificado ao lado do comando, ele exibirá o conteúdo do diretório atual."
+		echo "Confira o exemplo da utilização do ls no diretório /tmp:"
+		echo ""
+		echo -e "\e[00;31m'ls'\e[00m /tmp"
+		ls /tmp
+		echo ""
+		echo "Foram exibidos todos os diretórios principais do Linux, descritos no início deste tutorial."
+		read ok
+		
+		clear
+	    echo -e "\e[00;31m|------------------------------------------------------|\e[00m"
+	    echo -e "\e[00;31m|    OPERAÇÕES PARA ACESSO DE ARQUIVOS E DIRETORIOS    |\e[00m"
+	    echo -e "\e[00;31m|------------------------------------------------------|\e[00m"
+		echo "O comando 'ls' possui muitos parâmetros."
+		echo "O '-l', por exemplo, exibe o conteúdo do diretório detalhadamente, exibindo, por exemplo: quem criou o arquivo ou diretório, a data de criação e o tamanho."
+		echo "Exemplificando novamente com o diretório /tmp:"
+		echo ""
+		echo -e "\e[00;31m'ls -l'\e[00m /tmp"
+		ls -l /tmp
+		echo ""
+		echo "Os primeiros caracteres indicam as permissões do arquivo ou pasta."
+		read ok
+		
+		clear
+	    echo -e "\e[00;31m|------------------------------------------------------|\e[00m"
+	    echo -e "\e[00;31m|    OPERAÇÕES PARA ACESSO DE ARQUIVOS E DIRETORIOS    |\e[00m"
+	    echo -e "\e[00;31m|------------------------------------------------------|\e[00m"
+		echo "O comando 'cat', derivado de conCATenar, é um dos comandos mais importantes do Linux."
+		echo "É utilizado na criação, exibição e principalmente união dos arquivos."
+		echo "Vamos exemplificar concatenando um arquivo no fim do outro. Primeiramente criamos os dois arquivos."
+		echo ""
+		echo -e "\e[00;31m'touch arq1'\e[00m $loc_dir"
+		echo -e "\e[00;31m'touch arq2'\e[00m $loc_dir"
+		touch arq1
+		touch arq2
+		echo ""
+		echo "Agora realizamos a concatenação."
+		echo ""
+		echo -e "\e[00;31m'cat arquivo2 >> arquivo1'\e[00m $loc_dir"
+		cat arq2 >> arq1
+		echo ""
+		echo "o arq1 foi alterado, passando a ter seu conteúdo anterior ao qual foi agregado o conteúdo do arq2"
+        read ok
+		
+		clear
+	    echo -e "\e[00;31m|------------------------------------------------------|\e[00m"
+	    echo -e "\e[00;31m|    OPERAÇÕES PARA ACESSO DE ARQUIVOS E DIRETORIOS    |\e[00m"
+	    echo -e "\e[00;31m|------------------------------------------------------|\e[00m"
+		echo "Mostraremos agora duas funções do 'cat' de extrema importância."
+		echo "Há um arquivo no diretório /etc chamado 'passwd'. O arquivo exibe todos os usuários cadastrados no sistema operacional e dados relacionados a eles."
+		echo "Para acessar o arquivo, usamos:"
+		echo ""
+		echo -e "\e[00;31m'cd /etc'\e[00m $loc_dir"
+		echo -e "\e[00;31m'cat passwd'\e[00m $loc_dir"
+		cd /etc
+		cat passwd
+		echo ""
+		echo "Os campos exibem, respectivamente:"
+		echo "Login, referência da senha, UID (número de identificação do usuário), GID (número de identificação do grupo primário do usuário), informações adicionais, diretório pessoal e shell."
+		read ok
+		
+		clear
+	    echo -e "\e[00;31m|------------------------------------------------------|\e[00m"
+	    echo -e "\e[00;31m|    OPERAÇÕES PARA ACESSO DE ARQUIVOS E DIRETORIOS    |\e[00m"
+	    echo -e "\e[00;31m|------------------------------------------------------|\e[00m"
+		echo "Ainda no diretório /etc há o arquivo 'shadow', semelhante ao 'passwd', mas ao contrário deste o shadow exibe a senha dos usuário, em vez de apenas a referência dela."
+		echo "Por questões de segurança, apenas os superusuários podem acessá-lo."
+		echo "Para acessar o arquivo, usamos:"
+		echo ""
+		echo -e "\e[00;31m'cd /etc'\e[00m $loc_dir"
+		echo -e "\e[00;31m'cat shadow'\e[00m $loc_dir"
+		cd /etc
+		cat shadow
+		echo ""
+		read ok
+		clear
+		acarqd ;;
+		
+		2) echo "Digite a localização do diretório a ser acessado (incluindo o mesmo): "
+		read loc_dir
+		cd $loc_dir
+		echo "**********FEITO!**********"
+		echo "Deseja ver o comando utilizado? [s=Sim/n=Não]"
+		read see
+		if [ $see =  "s" ]
+		then
+			echo "O texto entre aspas faz parte do comando, o restante é o complemento do mesmo:"
+			echo -e "Comando Utilizado (ACESSAR DIRETÓRIO) : \e[00;31m'cd'\e[00m $loc_dir"
+		fi
+		read ok			
+		acarqd ;;
+		3) echo "Digite a localização do diretório a ser listado (incluindo o mesmo): "
+		read loc_dir
+		ls $loc_dir
+		echo "**********FEITO!**********"
+		echo "Deseja ver o comando utilizado? [s=Sim/n=Não]"
+		read see
+		if [ $see =  "s" ]
+		then
+			echo "O texto entre aspas faz parte do comando, o restante é o complemento do mesmo:"
+			echo -e "Comando Utilizado (LISTAR DIRETÓRIO) : \e[00;31m'ls'\e[00m $loc_dir"
+		fi
+		read ok			
+		acarqd ;;
+		4) echo "Digite a localização do diretório a ser listado detalhadamente (incluindo o mesmo): "
+		read loc_dir
+		ls -l $loc_dir
+		echo "**********FEITO!**********"
+		echo "Deseja ver o comando utilizado? [s=Sim/n=Não]"
+		read see
+		if [ $see =  "s" ]
+		then
+			echo "O texto entre aspas faz parte do comando, o restante é o complemento do mesmo:"
+			echo -e "Comando Utilizado (LISTAR DIRETÓRIO DETALHADAMENTE) : \e[00;31m'ls -l'\e[00m $loc_dir"
+		fi
+		read ok
+		acarqd ;;
+		5) echo "Digite a localização do arquivo a ser acessado (incluindo o mesmo): "
+		read loc_arq
+		cat loc_arq
+		echo "**********FEITO!**********"
+		echo "Deseja ver o comando utilizado? [s=Sim/n=Não]"
+		read see
+		if [ $see =  "s" ]
+		then
+			echo "O texto entre aspas faz parte do comando, o restante é o complemento do mesmo:"
+			echo -e "Comando Utilizado (ACESSAR ARQUIVO) : \e[00;31m'cat'\e[00m $loc_arq"
+		fi
+		read ok
+		acarqd ;;
+		6) menu ;;
+	esac
+}
+
+menu(){
+	clear
+	echo -e "\e[00;31m|------------------------------------------------------|\e[00m"
+	echo -e "\e[00;31m|                   MENU DE OPERAÇÕES                  |\e[00m"
+	echo -e "\e[00;31m|------------------------------------------------------|\e[00m"
+	echo -e "\e[00;31m|          Digite o número da operação desejada:       |\e[00m"
+	echo -e "\e[00;31m|------------------------------------------------------|\e[00m"
+	echo -e "\e[00;31m|    1. OPERAÇÕES COM ARQUIVOS E DIRETÓRIOS (PASTAS)   |\e[00m"
+	echo -e "\e[00;31m| 2. OPERAÇÕES COM PERMISSOES DE ARQUIVOS E DIRETORIOS |\e[00m"
+	echo -e "\e[00;31m|   3. OPERAÇÕES PARA ACESSO DE ARQUIVOS E DIRETORIOS  |\e[00m"
+	echo -e "\e[00;31m|             4. OPERACOES COM USUÁRIOS                |\e[00m"
+	echo -e "\e[00;31m|                 5. SURPREENDA-ME                     |\e[00m"
+	echo -e "\e[00;31m|                      6. SAIR                         |\e[00m"
+	echo -e "\e[00;31m|------------------------------------------------------|\e[00m"
+	read resp
+	while [ $resp -lt 1 -o $resp -gt 6 ]
+	do
+		echo "VALOR INCORRETO! DIGITE UM VALOR DENTRO DO INTERVALO ESPECIFICADO!"
+		read resp
+	done
+	case $resp in
+		1) arqd ;;
+		2) parqd ;;
+		3) acarqd ;;
+		4) usuarios ;;
+		5) surp ;;
+		6) exit ;;
+	esac
+}
+menu
+read
+exit
